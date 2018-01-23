@@ -1,3 +1,5 @@
+require('devtron').install()
+
 console.log('alma');
 
 const versionElement = document.querySelector('#version');
