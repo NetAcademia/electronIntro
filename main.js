@@ -12,5 +12,5 @@ app.on('ready', () => {
         
     win.webContents.openDevTools();
 
-    setMainMenu();
+    setMainMenu(win);
 });

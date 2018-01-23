@@ -1,12 +1,14 @@
 const { app, Menu } = require("electron");
 
+const { showDialog } = require('./dialog');
+
 const isWindows = process.platform === 'win32';
 
 module.exports = {
     setMainMenu
 };
 
-function setMainMenu() {
+function setMainMenu(win) {
   const template = [
     {
       label: isWindows ? 'File' : `${app.getName()}`,
@@ -16,6 +18,13 @@ function setMainMenu() {
           accelerator: isWindows ? 'Alt+f4' : 'CmdOrCtrl+Q',
           click() {
             app.quit();
+          }
+        },
+        { type: 'separator' },
+        {
+          label: 'show info dialog',
+          click() {
+            showDialog(win);
           }
         }
       ]
