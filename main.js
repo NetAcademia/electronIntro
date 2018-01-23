@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require('electron');
 
 const { setMainMenu } = require('./menu');
 
-require('electron-reload')(__dirname);
+// require('electron-reload')(__dirname);
 
 let win;
 

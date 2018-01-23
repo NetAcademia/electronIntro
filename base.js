@@ -1,4 +1,4 @@
-require('devtron').install()
+// require('devtron').install()
 
 console.log('alma');
 
