@@ -1,6 +1,6 @@
 const { app, Menu } = require("electron");
 
-const { showDialog } = require('./dialog');
+const { showDialog, savePid } = require('./dialog');
 
 const isWindows = process.platform === 'win32';
 
@@ -25,6 +25,12 @@ function setMainMenu(win) {
           label: 'show info dialog',
           click() {
             showDialog(win);
+          }
+        },
+        {
+          label: 'save pid file',
+          click() {
+            savePid(win);
           }
         }
       ]
